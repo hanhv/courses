@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MA 16600 Assignment Sheet Fall 2026</title>
+  
+  <!-- MathJax Scripts -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], processEscapes: true },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'code', 'pre'] }
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script>window.D2L = { mathJaxLoaded: true }</script>
+
+  <!-- Colorful CSS with Print Fixes -->
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-text: #1a1a1a;
+      --color-heading: #1a1a1a;
+      --color-border: #4a4a4a;
+      --color-header-bg: #1f2d3d;
+      --color-header-text: #ffffff;
+      --color-row-alt: #f2f4f6;
+      --color-exam-bg: #fde2e1;
+      --color-break-bg: #e6f0ea;
+      --color-link: #0b4f8a;
+      --color-focus: #b1420a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.5;
+      margin: 0;
+      padding: 0 1rem 3rem 1rem;
+      font-size: 1rem;
+    }
+    .skip-link {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--color-header-bg); color: var(--color-header-text);
+      padding: 0.75rem 1rem; z-index: 100; text-decoration: none;
+      border-radius: 0 0 0.25rem 0.25rem;
+    }
+    .skip-link:focus { left: 0.5rem; }
+    header { max-width: 60rem; margin: 0 auto; padding-top: 1.5rem; }
+    h1 { color: var(--color-heading); font-size: 1.6rem; margin-bottom: 0.25rem; }
+    .subtitle { font-size: 1rem; color: #333333; margin-top: 0; }
+    main { max-width: 60rem; margin: 0 auto; }
+    
+    /* Legend Styling */
+    nav.legend {
+      margin: 1.5rem 0; padding: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.375rem;
+      background-color: var(--color-row-alt);
+    }
+    nav.legend h2 { font-size: 1.05rem; margin-top: 0; }
+    nav.legend ul { margin: 0.5rem 0 0 0; padding-left: 1.25rem; }
+    nav.legend li { margin-bottom: 0.35rem; }
+    .swatch {
+      display: inline-block; width: 1rem; height: 1rem;
+      border: 1px solid var(--color-border); vertical-align: middle; margin-right: 0.4rem;
+    }
+    .swatch.exam { background-color: var(--color-exam-bg); }
+    .swatch.break { background-color: var(--color-break-bg); }
+    
+    a { color: var(--color-link); }
+    a:focus, button:focus, [tabindex]:focus { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+    
+    /* Table Styling */
+    .table-scroll {
+      overflow-x: auto; margin: 1.5rem 0 2.5rem 0;
+      border: 1px solid var(--color-border); border-radius: 0.375rem;
+    }
+    table { border-collapse: collapse; width: 100%; min-width: 52rem; }
+    caption {
+      text-align: left; font-weight: 700; font-size: 1.1rem;
+      padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+      background-color: var(--color-row-alt); border-bottom: 1px solid var(--color-border);
+    }
+    th, td { border: 1px solid var(--color-border); padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; }
+    thead th {
+      background-color: var(--color-header-bg); color: var(--color-header-text);
+      position: sticky; top: 0; font-weight: 700;
+    }
+    tbody tr:nth-child(even) { background-color: var(--color-row-alt); }
+    
+    /* Row Color Classes */
+    tr.exam-row { background-color: var(--color-exam-bg) !important; font-weight: 600; }
+    tr.break-row { background-color: var(--color-break-bg) !important; }
+    
+    .col-date, .col-day, .col-lesson { white-space: nowrap; }
+    .na { color: #555555; }
+
+    /* =========================================
+       PRINT FIXES: Forces colors and fits to page 
+       ========================================= */
+    @media print {
+      * {
+        /* Forces background colors to print */
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        padding: 0;
+        font-size: 11pt; /* Slightly smaller text for print */
+      }
+      main, header {
+        max-width: 100%; /* Removes screen width limits */
+        margin: 0;
+      }
+      .table-scroll {
+        overflow: visible; /* Stops the table from cutting off on the right */
+        border: none;
+        margin: 0;
+      }
+      table {
+        min-width: 100%; /* Lets the table shrink to fit the page */
+        width: 100%;
+      }
+      thead th {
+        position: static; /* Fixes weird header bugs in print */
+      }
+      tr {
+        page-break-inside: avoid; /* Stops a row from splitting across two pages */
+      }
+      .skip-link {
+        display: none; /* Hides screen-reader links on paper */
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <header>
+    <h1>MA 16600 Assignment Sheet</h1>
+    <p class="subtitle">Fall 2026</p>
+  </header>
+
+  <main id="main-content">
+    
+    <nav class="legend" aria-labelledby="legend-heading">
+      <h2 id="legend-heading">How to read this schedule</h2>
+      <p>Each row lists one class meeting or scheduled event. Rows are color-coded and labeled as follows:</p>
+      <ul>
+        <li><span class="swatch exam" aria-hidden="true"></span><strong>Red rows</strong> mark exam days.</li>
+        <li><span class="swatch break" aria-hidden="true"></span><strong>Green rows</strong> mark holidays, breaks, or days with no new lesson.</li>
+      </ul>
+    </nav>
+
+    <div class="table-scroll" role="region" aria-labelledby="schedule-caption" tabindex="0">
+      <table>
+        <caption id="schedule-caption">MA 16600 Assignment Sheet Fall 2026</caption>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Day</th>
+            <th scope="col">Lesson</th>
+            <th scope="col">Topics to Cover</th>
+            <th scope="col">Section #</th>
+            <th scope="col">HW/Quiz Due Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-date">Aug. 24</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">1</td>
+            <td>Vectors in the plane<br />Vectors in the 3-dimensional space</td>
+            <td>13.1, 13.2</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Aug. 26</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">2</td>
+            <td>Geometry in the plane<br />Geometry in the 3-dimensional space<br />Lines and planes in space</td>
+            <td>13.1, 13.2, 13.5</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Aug. 27</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 1</td>
+            <td>covers Lessons 1, 2</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Aug. 28</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">3</td>
+            <td>Dot Products</td>
+            <td>13.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Aug. 30</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+          </tr>
+          <tr>
+            <td class="col-date">Aug. 31</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">4</td>
+            <td>Cross Products<br />Application of the cross product</td>
+            <td>13.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 2</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">5</td>
+            <td>Area of the region between curves</td>
+            <td>6.2</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 3</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 2</td>
+            <td>covers Lessons 3,4</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 4</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">6</td>
+            <td>Volumes by slicing<br />Washer method<br /><em>Note: Attendance begins</em></td>
+            <td>6.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 6</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 1, 2, 3, 4, 5 &amp; Q 1, 2</td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Sep. 7</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson na">&times;</td>
+            <td>No Lesson (Labor Day)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 9</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">7</td>
+            <td>Volumes by shells<br />Shell method</td>
+            <td>6.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 10</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 3</td>
+            <td>covers Lessons 5, 6</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 11</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">8</td>
+            <td>Lengths of curves<br />Surface area</td>
+            <td>6.5, 6.6</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 13</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 6, 7 &amp; Q 3</td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 14</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">9</td>
+            <td>Physical applications</td>
+            <td>6.7</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 16</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">10</td>
+            <td>Integration by parts</td>
+            <td>8.2</td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Sep. 17</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Go over Study Guide for Exam 1</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 18</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">11</td>
+            <td>Trigonometric Integrals Part 1</td>
+            <td>8.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 20</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 8, 9, 10</td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Sep. 21</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Review for Exam 1</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="exam-row">
+            <td class="col-date">Sep. 21</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">Exam 1</td>
+            <td>Mon 09/21, 8:00p - 9:00p, Lessons 1 - 10</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 23</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">12</td>
+            <td>Trigonometric Integrals Part 2</td>
+            <td>8.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 24</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 4</td>
+            <td>covers Lessons 8, 9, 10</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Sep. 25</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson na">&times;</td>
+            <td>No Class</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 27</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 11 &amp; Q 4</td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 28</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">13</td>
+            <td>Trigonometric Substitutions Part 1</td>
+            <td>8.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Sep. 30</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">14</td>
+            <td>Trigonometric Substitutions Part 2</td>
+            <td>8.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 1</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 5</td>
+            <td>covers Lessons 11, 12, 13, 14</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 2</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">15</td>
+            <td>Summary of Trig. Integ. &amp; Trig. Sub.</td>
+            <td>8.1, 8.2, 8.3, 8.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 4</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 12, 13, 14 &amp; Q 5</td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 5</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">16</td>
+            <td>Partial Fractions Part 1</td>
+            <td>8.5</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 7</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">17</td>
+            <td>Partial Fractions Part 2</td>
+            <td>8.5</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 8</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 6</td>
+            <td>covers Lessons 15, 16, 17</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 9</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">18</td>
+            <td>Improper Integrals</td>
+            <td>8.9</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 11</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 15, 16, 17 &amp; Q 6</td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Oct. 12</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson na">&times;</td>
+            <td>No Lesson (Fall Break)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 14</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">19</td>
+            <td>Sequence and its limit</td>
+            <td>10.1, 10.2</td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Oct. 15</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Go over Study Guide for Exam 2</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 16</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">20</td>
+            <td>Introduction to the Series (Telescoping Series)</td>
+            <td>10.1, 10.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 18</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 18, 19</td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Oct. 19</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Review for Exam 2</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="exam-row">
+            <td class="col-date">Oct. 20</td>
+            <td class="col-day">T</td>
+            <td class="col-lesson">Exam 2</td>
+            <td>Tue 10/20, 8:00p - 9:00p, Lessons 11 - 20</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 21</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">21</td>
+            <td>Divergence Test</td>
+            <td>10.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 22</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 7</td>
+            <td>covers Lessons 18, 19, 20</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Oct. 23</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson na">&times;</td>
+            <td>No Class</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 25</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 20 &amp; Q 7</td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 26</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">22</td>
+            <td>Integral Test &amp; \(p\)-series</td>
+            <td>10.5</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 28</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">23</td>
+            <td>Comparison Test<br/>Limit Comparison Test</td>
+            <td>10.5</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 29</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 8</td>
+            <td>covers Lessons 21, 22, 23</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Oct. 30</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">24</td>
+            <td>Alternating Series Test</td>
+            <td>10.6</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 1</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 21, 22, 23 &amp; Q 8</td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 2</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">25</td>
+            <td>Ratio Test &amp; Root Test</td>
+            <td>10.7</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 4</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">26</td>
+            <td>Choose a convergence test (general strategy)</td>
+            <td>10.8</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 5</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 9</td>
+            <td>covers Lessons 24, 25, 26</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 6</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">27</td>
+            <td>Taylor Series Part 1 (Approximating functions with polynomials)</td>
+            <td>11.1, 11.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 8</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 24, 25, 26 &amp; Q 9</td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 9</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">28</td>
+            <td>Taylor Series Part 2</td>
+            <td>11.1, 11.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 11</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">29</td>
+            <td>Properties of Power Series Part 1</td>
+            <td>11.2</td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Nov. 12</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Go over Study Guide for Exam 3</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 13</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">30</td>
+            <td>Summary of Taylor Series &amp; Applications</td>
+            <td>11.3, 11.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 15</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 27, 28, 29</td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Nov. 16</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Review for Exam 3</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="exam-row">
+            <td class="col-date">Nov. 16</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">Exam 3</td>
+            <td>Mon 11/16, 6:30p - 7:30p, Lessons 21 - 30</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 18</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">31</td>
+            <td>Properties of Power Series Part 2</td>
+            <td>11.2, 11.4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 19</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 10</td>
+            <td>covers Lessons 27,28,29,30</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 20</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">32</td>
+            <td>Polar Coordinates (Basics)</td>
+            <td>12.2</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 22</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 30, 31 &amp; Q 10</td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Nov. 23</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson na">&times;</td>
+            <td>No Class</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Nov. 25</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Thanksgiving Break</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Nov. 26</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Thanksgiving Break</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Nov. 27</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Thanksgiving Break</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 29</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+          </tr>
+          <tr>
+            <td class="col-date">Nov. 30</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson">33</td>
+            <td>Calculus in polar coordinates Part 1</td>
+            <td>12.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Dec. 2</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson">34</td>
+            <td>Calculus in polar coordinates Part 2</td>
+            <td>12.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Dec. 3</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson">Quiz 11</td>
+            <td>covers Lessons 31, 32, 33, 34</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Dec. 4</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson">35</td>
+            <td>Summary of Polar Coordinates<br /><em>Note: Attendance ends</em></td>
+            <td>12.2, 12.3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Dec. 6</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td>HW 32, 33, 34 &amp; Q 11</td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Dec. 7</td>
+            <td class="col-day">M</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Review for Final Exam</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Dec. 9</td>
+            <td class="col-day">W</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Review for Final Exam</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Dec. 10</td>
+            <td class="col-day">Th</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Review for Final Exam</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="break-row">
+            <td class="col-date">Dec. 11</td>
+            <td class="col-day">F</td>
+            <td class="col-lesson na">&times;</td>
+            <td>Review for Final Exam</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="col-date">Dec. 13</td>
+            <td class="col-day">Sun</td>
+            <td class="col-lesson na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+            <td class="na">&times;</td>
+          </tr>
+          <tr class="exam-row">
+            <td class="col-date">Dec. 14 - Dec. 19</td>
+            <td class="col-day"></td>
+            <td class="col-lesson">Final</td>
+            <td>Final Exam Week</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

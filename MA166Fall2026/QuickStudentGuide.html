@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Student Guide to MyLabMath — Purdue University Fall 2026</title>
+<style>
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #1a1a1a;
+    --color-heading: #0d1b2a;
+    --color-link: #0b4f8a;
+    --color-link-visited: #5a2a82;
+    --color-border: #c9c9c9;
+    --color-warning-bg: #fff4e5;
+    --color-warning-border: #b35c00;
+    --color-important-bg: #fdecec;
+    --color-important-border: #a4262c;
+    --color-note-bg: #eaf3fb;
+    --color-note-border: #0b4f8a;
+    --focus-outline: 3px solid #005fcc;
+  }
+
+  html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 4rem;
+    font-size: 1.0625rem;
+  }
+
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+  }
+  a:visited { color: var(--color-link-visited); }
+  a:hover { text-decoration: none; }
+  a:focus,
+  button:focus,
+  [tabindex]:focus {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    background: #0d1b2a;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    z-index: 100;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus {
+    left: 0;
+    top: 0;
+  }
+
+  header.doc-header {
+    border-bottom: 3px solid var(--color-heading);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    color: var(--color-heading);
+    font-size: 1.75rem;
+    margin: 0 0 0.35rem 0;
+  }
+
+  h2 {
+    color: var(--color-heading);
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.25rem;
+    margin-top: 2.25rem;
+  }
+
+  h3 {
+    color: var(--color-heading);
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #3a3a3a;
+    margin: 0;
+  }
+
+  .publish-date {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    margin-top: 0.25rem;
+  }
+
+  nav.toc {
+    background-color: #f4f6f8;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+  nav.toc h2 {
+    margin-top: 0;
+    border-bottom: none;
+    font-size: 1.15rem;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+  nav.toc li { margin-bottom: 0.3rem; }
+
+  ol, ul {
+    padding-left: 1.75rem;
+  }
+  li { margin-bottom: 0.6rem; }
+
+  ol[type="i"] { list-style-type: lower-roman; }
+
+  .callout {
+    border-left: 5px solid;
+    border-radius: 4px;
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0;
+  }
+  .callout p:first-child { margin-top: 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .callout-warning {
+    background-color: var(--color-warning-bg);
+    border-color: var(--color-warning-border);
+  }
+  .callout-important {
+    background-color: var(--color-important-bg);
+    border-color: var(--color-important-border);
+  }
+  .callout-note {
+    background-color: var(--color-note-bg);
+    border-color: var(--color-note-border);
+  }
+
+  code, .path {
+    font-family: "Courier New", Consolas, monospace;
+    background-color: #f0f0f0;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-size: 0.95em;
+    word-break: break-word;
+  }
+
+  footer.doc-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    color: #4a4a4a;
+  }
+
+  .back-to-top {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  @media (prefers-contrast: more) {
+    :root {
+      --color-link: #003a66;
+      --color-border: #000000;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="doc-header">
+  <h1>Quick Student Guide to MyLabMath</h1>
+  <p class="subtitle">Purdue University — Fall 2026</p>
+  <p class="publish-date">Published August 18, 2026</p>
+</header>
+
+<nav class="toc" aria-labelledby="toc-heading">
+  <h2 id="toc-heading">Contents</h2>
+  <ol>
+    <li><a href="#login">MyLabMath Log In</a></li>
+    <li><a href="#transfer">Students Who Transfer Between Sections</a></li>
+    <li><a href="#further-info">Further Information (Optional)</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#other-links">Other Links</a></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+
+  <section id="login" aria-labelledby="login-heading">
+    <h2 id="login-heading">MyLabMath Log In</h2>
+
+    <ol>
+      <li>
+        <strong>Browser:</strong> MyLabMath works best with Google Chrome. Firefox is also
+        acceptable. MyLabMath may not work as well with other browsers.
+      </li>
+      <li>
+        <div class="callout callout-warning" role="note">
+          <span class="callout-label">Warning</span>
+          <p>
+            Do not simply search for &ldquo;MyLabMath&rdquo; on Google or go directly to Pearson&rsquo;s
+            website. You must log in, at least the first time, through Purdue Brightspace.
+          </p>
+        </div>
+      </li>
+      <li>
+        <strong>Brightspace:</strong> Use the Brightspace login page at
+        <a href="https://purdue.brightspace.com/d2l/login">purdue.brightspace.com/d2l/login</a>
+        and complete two-factor authentication to log in.
+        <p>Once you have logged in to your account in Brightspace, follow the steps below.</p>
+        <ol type="i">
+          <li>
+            Look for your Mathematics course (for example, &ldquo;SPRING 2026 MA16500-XXX REC&rdquo;)
+            and select it.
+          </li>
+          <li>In the menu on the second line at the top, choose <strong>Content</strong> and select it.</li>
+          <li>
+            On the left-hand side, look for &ldquo;Access Pearson MyLab Math&rdquo; or a similarly
+            named link, and select it.
+          </li>
+          <li>Select <strong>Access Pearson</strong> (or a similarly named button).</li>
+          <li>
+            Select <strong>Open MyLab &amp; Mastering</strong>. Disable your pop-up blocker and allow
+            pop-ups, at least for Pearson.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <strong>Access code required:</strong> Students in MA 161, MA 162, MA 165, MA 166, MA 261,
+        MA 262, MA 265, MA 266, and MA 303 must buy an access code, which can be purchased directly
+        from Pearson within MyLabMath. Students who previously bought a multi-semester access code
+        for the Calculus textbook (Briggs, et al.) and are enrolling in another calculus course that
+        uses the <strong>same</strong> textbook will not need to buy the code again. However, the
+        access code is tied to the textbook: if a student is moving into a course that uses a
+        <strong>different</strong> textbook, a new access code for that textbook must be purchased,
+        even if the student already owns a code for a different book.
+      </li>
+      <li>
+        <strong>How to purchase the code:</strong> It is best to buy a code directly from Pearson
+        within the course link, since that ensures you receive the correct code for your course.
+      </li>
+      <li>
+        <strong>What the code is for:</strong> The code gives students access to their online
+        homework and the electronic version of their textbook. A physical copy of the textbook is
+        not required. Students can print a limited number of textbook pages per day and may
+        optionally purchase a loose-leaf edition of the textbook through the MyLabMath course link.
+      </li>
+      <li>
+        <strong>Temporary access for two weeks:</strong> Students may select &ldquo;Get temporary
+        access without payment for 14 days&rdquo; on the payment options page if they are waiting on
+        financial aid or other funding to purchase full access. Full, paid access must be purchased
+        before the end of the 14th day to remain enrolled in the course.
+        <div class="callout callout-note" role="note">
+          <span class="callout-label">Note</span>
+          <p>
+            The grace period for each textbook is available only once. Students who choose a
+            single-semester (18-week) MyLabMath access code for a given textbook are not eligible
+            for another trial period for that same textbook in a future semester; they will need to
+            purchase access again without the two-week free trial. This restriction does not apply
+            to a different textbook.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="transfer" aria-labelledby="transfer-heading">
+    <h2 id="transfer-heading">Students Who Transfer Between Sections</h2>
+    <ol>
+      <li>
+        Students who transfer to a different section should inform their new TA as soon as possible
+        so that previous scores can be correctly transferred.
+      </li>
+      <li>
+        Students who transfer to a new section should access Pearson through their new Brightspace
+        section so they are enrolled in the correct section of MyLabMath. All future homework should
+        be completed in this new section; otherwise, MyLabMath scores will not synchronize to
+        Brightspace. There is no need to redo online homework that was already completed in the old
+        section &mdash; old scores will be migrated to the new section once a transfer request is
+        made to the TA.
+      </li>
+    </ol>
+  </section>
+
+  <section id="further-info" aria-labelledby="further-info-heading">
+    <h2 id="further-info-heading">Further Information (Optional)</h2>
+    <ol>
+      <li>
+        Watch the
+        <a href="https://support.pearson.com/getsupport/s/document-item?language=en_US&amp;bundleId=How-to-register-for-MyLab-Mastering-or-Revel-from-D2L-Brightspace&amp;topicId=How_to_register_for_MyLab_Mastering_or_Revel_from_D2L_Brightspace.html&amp;_LANG=enus">
+          registration video: How to register for MyLab Mastering or Revel from D2L Brightspace
+        </a>.
+      </li>
+    </ol>
+  </section>
+
+  <section id="troubleshooting" aria-labelledby="troubleshooting-heading">
+    <h2 id="troubleshooting-heading">Troubleshooting</h2>
+    <p>If you have technical issues accessing MyLabMath, try the following:</p>
+    <ol>
+      <li>
+        Clear your browser&rsquo;s cache and cookies, then close the browser and try again. The
+        process for clearing cache and cookies differs by browser; search online for instructions
+        specific to your browser if needed. If you would rather not clear your cache, using Chrome&rsquo;s
+        incognito mode may also work.
+      </li>
+      <li>Try a different browser (Google Chrome and Firefox are preferred).</li>
+      <li>Make sure your pop-up blocker is disabled.</li>
+      <li>
+        Getting a &ldquo;Session Ended&rdquo; or &ldquo;Session Expired&rdquo; error? Follow the
+        instructions in
+        <a href="https://support.pearson.com/getsupport/s/article/Your-Session-Ended-Please-Start-Again">
+          Your Session Ended, Please Start Again
+        </a>.
+      </li>
+      <li>
+        Brightspace timing out is a common cause of connection issues. If this happens, log out of
+        Brightspace and log back in.
+      </li>
+      <li>
+        If these common fixes do not resolve the issue, contact
+        <a href="https://support.pearson.com/getsupport/s/contactsupport">Pearson Technical Support</a>.
+      </li>
+      <li>
+        Feel free to contact your instructor or TA (if you have one) about non-technical, minor
+        issues with homework &mdash; for example, trouble entering a solution to a problem, or if
+        you believe MyLabMath is not accepting a solution you think is correct.
+      </li>
+    </ol>
+  </section>
+
+  <section id="other-links" aria-labelledby="other-links-heading">
+    <h2 id="other-links-heading">Other Links</h2>
+    <ul>
+      <li>
+        <a href="https://support.pearson.com/getsupport/s/article/Deleting-Browser-Cached-Files-and-Cookies">
+          Deleting browser cached files and cookies
+        </a>
+      </li>
+      <li>
+        <a href="https://support.pearson.com/getsupport/s/article/Pop-Up-Blockers">
+          Pop-up blockers: how to allow pop-ups
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <p><a class="back-to-top" href="#main-content">Back to top of guide</a></p>
+
+</main>
+
+<footer class="doc-footer">
+  <p>Quick Student Guide to MyLabMath &mdash; Purdue University, Fall 2026. Original document
+  published August 18, 2026.</p>
+</footer>
+
+</body>
+</html>
