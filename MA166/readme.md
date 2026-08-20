@@ -14,7 +14,7 @@ This folder contains the Fall 2026 MA 16600 course website.
 The `components/` folder contains HTML shared across the lesson pages:
 
 - `header.html` — Shared header and navigation.
-- `footer.html` — Shared accessibility notice and footer.
+- `footer.html` — Shared footer.
 
 Changes to these shared files should automatically apply to all lesson pages.
 
