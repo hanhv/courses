@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>MA 511 Schedule | Hanh Vo</title> 
+
+<!-- Connects to your parent directory style.css -->
+<link rel="stylesheet" href="https://hanhv.github.io/style.css"> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+<!-- MathJax for rendering math symbols -->
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true
+    },
+    options: { 
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'code', 'pre'] 
+    } 
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<!-- Schedule Table Styles -->
+<style> 
+:root { 
+    --color-border: #4a4a4a; 
+    --color-header-bg: #1f2d3d; 
+    --color-header-text: #ffffff; 
+    --color-row-alt: #f2f4f6; 
+    --color-exam-bg: #fde2e1; 
+} 
+/* Table Styling */ 
+.table-scroll { 
+    overflow-x: auto; 
+    margin: 1.5rem 0 2.5rem 0; 
+    border: 1px solid var(--color-border); 
+    border-radius: 0.375rem; 
+} 
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    min-width: 44rem; 
+    font-size: 0.95rem;
+} 
+caption { 
+    text-align: left; 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+    padding: 0.75rem 0.75rem 0.5rem 0.75rem; 
+    background-color: var(--color-row-alt); 
+    border-bottom: 1px solid var(--color-border); 
+} 
+th, td { 
+    border: 1px solid var(--color-border); 
+    padding: 0.6rem 0.75rem; 
+    text-align: left; 
+    vertical-align: top; 
+} 
+/* Sticky Header */ 
+thead th { 
+    background-color: var(--color-header-bg); 
+    color: var(--color-header-text); 
+    position: sticky; 
+    top: 0; 
+    font-weight: 700; 
+    z-index: 2; 
+} 
+tbody tr:nth-child(even) { 
+    background-color: var(--color-row-alt); 
+} 
+/* Row Color Classes */ 
+tr.exam-row { 
+    background-color: var(--color-exam-bg) !important; 
+    font-weight: 600; 
+} 
+.col-week, .col-date { 
+    white-space: nowrap; 
+} 
+/* Print Fixes */ 
+@media print { 
+    * { 
+        -webkit-print-color-adjust: exact !important; 
+        print-color-adjust: exact !important; 
+    } 
+    body { padding: 0; } 
+    .table-scroll { overflow: visible; border: none; margin: 0; } 
+    table { min-width: 100%; width: 100%; } 
+    thead th { position: static; } 
+    tr { page-break-inside: avoid; } 
+} 
+</style>
+</head>
+<body> 
+
+<!-- Navigation -->
+<nav class="top-nav"> 
+    <div class="nav-container"> 
+        <a href="https://hanhv.github.io/courses/index.html" class="nav-logo">All courses</a> 
+        <div class="nav-links"> 
+            <a href="index.html">MA 51100</a> 
+            <a href="syllabus.html">Syllabus</a> 
+            <a href="schedule.html" class="active">Schedule</a> 
+        </div> 
+    </div> 
+</nav> 
+
+<!-- Main Content Container -->
+<div class="container"> 
+    <header> 
+        <h1>Schedule</h1> 
+        <p class="item-desc course-title"> Linear Algebra and its Applications &mdash; Fall 2026 </p> 
+    </header> 
+
+    <main> 
+        <div class="table-scroll" role="region" aria-labelledby="schedule-caption" tabindex="0"> 
+            <table> 
+                <caption id="schedule-caption">MA 511 Course Schedule Fall 2026</caption> 
+                <thead> 
+                    <tr> 
+                        <th scope="col">Week</th> 
+                        <th scope="col">Date</th> 
+                        <th scope="col">Section &amp; Topics</th> 
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <!-- Week 1 --> 
+                    <tr><td class="col-week" rowspan="3">1</td><td class="col-date">M Aug. 24</td><td>1.2. Geometry of Linear Equations</td></tr> 
+                    <tr><td class="col-date">W Aug. 26</td><td>1.3. An Example of Gaussian Elimination</td></tr> 
+                    <tr><td class="col-date">F Aug. 28</td><td>1.4. Matrix Notation and Matrix Multiplication</td></tr> 
+                    
+                    <!-- Week 2 --> 
+                    <tr><td class="col-week" rowspan="3">2</td><td class="col-date">M Aug. 31</td><td>1.5. Triangular Factors and Row Exchanges</td></tr> 
+                    <tr><td class="col-date">W Sep. 02</td><td>1.6. Inverses and Transposes</td></tr> 
+                    <tr><td class="col-date">F Sep. 04</td><td>2.1. Vector Spaces and Subspaces</td></tr> 
+                    
+                    <!-- Week 3 --> 
+                    <tr><td class="col-week" rowspan="3">3</td><td class="col-date">M Sep. 07</td><td>No Class (Labor Day)</td></tr> 
+                    <tr><td class="col-date">W Sep. 09</td><td>2.2. Solving \(Ax = 0\) and \(Ax = b\)</td></tr> 
+                    <tr><td class="col-date">F Sep. 11</td><td>2.3. Linear Independence, Basis, and Dimension</td></tr> 
+                    
+                    <!-- Week 4 --> 
+                    <tr><td class="col-week" rowspan="3">4</td><td class="col-date">M Sep. 14</td><td>2.4. The Four Fundamental Subspaces (Part 1)</td></tr> 
+                    <tr><td class="col-date">W Sep. 16</td><td>2.4. The Four Fundamental Subspaces (Part 2)</td></tr> 
+                    <tr><td class="col-date">F Sep. 18</td><td>2.6. Linear Transformations (Part 1)</td></tr> 
+                    
+                    <!-- Week 5 --> 
+                    <tr><td class="col-week" rowspan="3">5</td><td class="col-date">M Sep. 21</td><td>2.6. Linear Transformations (Part 2)</td></tr> 
+                    <tr><td class="col-date">W Sep. 23</td><td>3.1. Orthogonal Vectors and Subspaces</td></tr> 
+                    <tr><td class="col-date">F Sep. 25</td><td>3.2. Cosines and Projections onto Lines</td></tr> 
+                    
+                    <!-- Week 6 --> 
+                    <tr><td class="col-week" rowspan="3">6</td><td class="col-date">M Sep. 28</td><td>3.3. Projections and Least Squares (Part 1)</td></tr> 
+                    <tr><td class="col-date">W Sep. 30</td><td>3.3. Projections and Least Squares (Part 2)</td></tr> 
+                    <tr><td class="col-date">F Oct. 02</td><td>3.4. Orthogonal Bases and Gram-Schmidt (Part 1)</td></tr> 
+                    
+                    <!-- Week 7 --> 
+                    <tr><td class="col-week" rowspan="3">7</td><td class="col-date">M Oct. 05</td><td>3.4. Orthogonal Bases and Gram-Schmidt (Part 2)</td></tr> 
+                    <tr><td class="col-date">W Oct. 07</td><td><strong>Exam 1 Review</strong> (In Class)</td></tr> 
+                    <tr class="exam-row"><td class="col-date">F Oct. 09</td><td><strong>Midterm Exam 1</strong> (In Class, 2:30 PM - 3:20 PM)</td></tr> 
+                    
+                    <!-- Week 8 --> 
+                    <tr><td class="col-week" rowspan="3">8</td><td class="col-date">M Oct. 12</td><td>No Class (Fall Break)</td></tr> 
+                    <tr><td class="col-date">W Oct. 14</td><td>3.5. The Fast Fourier Transform (Part 1)</td></tr> 
+                    <tr><td class="col-date">F Oct. 16</td><td>3.5. The Fast Fourier Transform (Part 2)</td></tr> 
+                    
+                    <!-- Week 9 --> 
+                    <tr><td class="col-week" rowspan="3">9</td><td class="col-date">M Oct. 19</td><td>4.2. Formulas for Determinants</td></tr> 
+                    <tr><td class="col-date">W Oct. 21</td><td>4.3. Applications of Determinants</td></tr> 
+                    <tr><td class="col-date">F Oct. 23</td><td>4.4. Cramer's Rule, Inverses, and Volumes</td></tr> 
+                    
+                    <!-- Week 10 --> 
+                    <tr><td class="col-week" rowspan="3">10</td><td class="col-date">M Oct. 26</td><td>5.2. Diagonalizing a Matrix</td></tr> 
+                    <tr><td class="col-date">W Oct. 28</td><td>5.3. Difference Equations and Powers \(A^k\) (Part 1)</td></tr> 
+                    <tr><td class="col-date">F Oct. 30</td><td>5.3. Difference Equations and Powers \(A^k\) (Part 2)</td></tr> 
+                    
+                    <!-- Week 11 --> 
+                    <tr><td class="col-week" rowspan="3">11</td><td class="col-date">M Nov. 02</td><td>5.4. Differential Equations and \(e^{At}\) (Part 1)</td></tr> 
+                    <tr><td class="col-date">W Nov. 04</td><td>5.4. Differential Equations and \(e^{At}\) (Part 2)</td></tr> 
+                    <tr><td class="col-date">F Nov. 06</td><td>5.5. Complex Matrices (Part 1)</td></tr> 
+                    
+                    <!-- Week 12 --> 
+                    <tr><td class="col-week" rowspan="3">12</td><td class="col-date">M Nov. 09</td><td>5.5. Complex Matrices (Part 2)</td></tr> 
+                    <tr><td class="col-date">W Nov. 11</td><td>5.6. Similarity Transformations (Part 1)</td></tr> 
+                    <tr><td class="col-date">F Nov. 13</td><td>5.6. Similarity Transformations (Part 2)</td></tr> 
+                    
+                    <!-- Week 13 --> 
+                    <tr><td class="col-week" rowspan="3">13</td><td class="col-date">M Nov. 16</td><td>6.2. Tests for Positive Definiteness</td></tr> 
+                    <tr><td class="col-date">W Nov. 18</td><td><strong>Exam 2 Review</strong> (In Class)</td></tr> 
+                    <tr class="exam-row"><td class="col-date">F Nov. 20</td><td><strong>Midterm Exam 2</strong> (In Class, 2:30 PM - 3:20 PM)</td></tr> 
+                    
+                    <!-- Week 14 --> 
+                    <tr><td class="col-week" rowspan="3">14</td><td class="col-date">M Nov. 23</td><td>No Class (Thanksgiving Break)</td></tr> 
+                    <tr><td class="col-date">W Nov. 25</td><td>No Class (Thanksgiving Break)</td></tr> 
+                    <tr><td class="col-date">F Nov. 27</td><td>No Class (Thanksgiving Break)</td></tr> 
+                    
+                    <!-- Week 15 --> 
+                    <tr><td class="col-week" rowspan="3">15</td><td class="col-date">M Nov. 30</td><td>6.3. Singular Value Decomposition (SVD)</td></tr> 
+                    <tr><td class="col-date">W Dec. 02</td><td>6.4. Minimum Principles</td></tr> 
+                    <tr><td class="col-date">F Dec. 04</td><td>6.5. The Finite Element Method</td></tr> 
+                    
+                    <!-- Week 16 --> 
+                    <tr><td class="col-week" rowspan="3">16</td><td class="col-date">M Dec. 07</td><td>Course Review</td></tr> 
+                    <tr><td class="col-date">W Dec. 09</td><td>Course Review</td></tr> 
+                    <tr><td class="col-date">F Dec. 11</td><td>Course Review</td></tr> 
+                    
+                    <!-- Finals Week --> 
+                    <tr class="exam-row"><td class="col-week">17</td><td class="col-date">Dec. 14 - 19</td><td><strong>Final Exam Week</strong></td></tr> 
+                </tbody> 
+            </table> 
+        </div> 
+    </main>
+</div>
+
+<!-- Global Footer -->
+<footer class="footer-signature"> 
+    <p>&copy; 2026 Hanh Vo &bull; Department of Mathematics &bull; Purdue University</p> 
+</footer>
+
+</body>
+</html>

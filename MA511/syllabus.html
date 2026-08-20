@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>MA 511 Syllabus | Hanh Vo</title> 
+
+    <!-- Connects to your parent directory style.css -->
+    <link rel="stylesheet" href="https://hanhv.github.io/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- MathJax for rendering math symbols -->
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']],
+            processEscapes: true
+        },
+        options: { 
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'code', 'pre'] 
+        } 
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+    <!-- Custom Style Overrides for Syllabus -->
+    <style> 
+        .syllabus-section {
+            margin-bottom: 2rem;
+        }
+        /* Clean Sub-Section Label matched exactly to your index.html */
+        .sub-section-label {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #222;
+            border-bottom: 2px solid #CFB991;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .syllabus-list {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .syllabus-list li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        /* Syllabus Grade Table Styling */
+        .grade-table-wrapper {
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        .grade-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 0;
+            font-size: 1rem;
+        }
+        .grade-table th, .grade-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .grade-table th {
+            border-top: 2px solid #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
+            background-color: #f9f9f9;
+            font-weight: 700;
+        }
+        .grade-table tr:last-child td {
+            border-bottom: 2px solid #1a1a1a;
+        }
+        .grade-table td:last-child, .grade-table th:last-child {
+            text-align: right;
+        }
+        .grade-cutoffs {
+            background-color: #f2f4f6;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+        /* Links */
+        a {
+            color: #0b4f8a;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #b1420a;
+        }
+    </style>
+</head>
+<body> 
+
+<!-- Navigation -->
+<nav class="top-nav"> 
+    <div class="nav-container"> 
+        <a href="https://hanhv.github.io/courses/index.html" class="nav-logo">All courses</a> 
+        <div class="nav-links"> 
+            <a href="index.html">MA 51100</a> 
+            <a href="syllabus.html" class="active">Syllabus</a> 
+            <a href="schedule.html">Schedule</a> 
+        </div> 
+    </div> 
+</nav> 
+
+<!-- Main Content Container -->
+<div class="container"> 
+    <header> 
+        <h1>Syllabus</h1> 
+        <p class="item-desc course-title"> Linear Algebra and its Applications &mdash; Fall 2026 </p> 
+    </header> 
+
+    <main> 
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Basic Information</span>
+            </div>
+            <ul class="syllabus-list">
+                <li>Instructor: Hanh Vo; Office: ET 314F; Email: <a href="mailto:vo84@purdue.edu">vo84@purdue.edu</a></li>
+                <li>The class meets MWF 2:30 PM &ndash; 3:20 PM in CA 347.</li>
+                <li>Office Hours: MWF 3:45 PM &ndash; 4:45 PM, ET 314F</li>
+            </ul>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Course Content</span>
+            </div>
+            <ul class="syllabus-list">
+                <li>Text Book: <em>Linear Algebra and its Applications</em>, 4th Edition, by Gilbert Strang. We will cover most of the first 6 chapters of the book.</li>
+                <li>Brightspace: This is where you will find course lecture notes, announcements, and course documents.</li>
+            </ul>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Grades</span>
+            </div>
+            <p>Course grades will be determined from your overall score computed as follows:</p>
+            <div class="grade-table-wrapper">
+                <table class="grade-table">
+                    <thead>
+                        <tr>
+                            <th>Assessment</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Quiz</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr>
+                            <td>Midterm Exam 1</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Midterm Exam 2</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Final Exam</td>
+                            <td>30%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grade-cutoffs">
+                Students who earn at least 97% of the total points in this course are guaranteed an A+, 93% guarantees an A, 90% an A-, 87% a B+, 83% a B, 80% a B-, 77% a C+, 73% a C, 70% a C-, 67% a D+, 63% a D, and 60% a D-. <br><br>
+                For each of these grades, it is possible that a somewhat lower percentage will be sufficient to earn that grade at the end of the semester.
+            </div>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Quizzes and Practice Problems</span>
+            </div>
+            <ul class="syllabus-list">
+                <li>In-Class Quizzes (30%): There will be regular in-class quizzes throughout the semester, typically administered on Fridays, except during exam weeks. These quizzes will be similar to the examples covered in lectures and the assigned practice problems. 
+                    At the end of the semester, the two lowest quiz scores will be dropped. 
+                    No late or make-up quizzes will be allowed without prior documented approval.</li>
+                <li>Practice Problems: To help you prepare for the quizzes and exams, recommended problem sets will be assigned regularly. These problem sets will not be collected or graded. However, completing and understanding these problems is essential for success on the quizzes and examinations.</li>
+            </ul>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Examinations</span>
+            </div>
+            <p>There will be two midterm exams and a final exam. Please see the course schedule for the midterm exam dates.</p>
+            <p>Details about the final exam will be announced later in the semester by the registrar's office.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Grade Appeals</span>
+            </div>
+            <p>Regrade requests will only be accepted for 24 hours after the grades are returned.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Calculators</span>
+            </div>
+            <p>Calculators and other electronic devices will not be allowed for use during in-class quizzes, midterms, or the final exam.</p>
+        </section>
+        
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Collaboration and Academic Integrity</span>
+            </div>
+            <p>Collaboration on ungraded practice problems is allowed and highly encouraged. However, all graded assessments (quizzes and exams) must be completed independently.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Use of Artificial Intelligence</span>
+            </div>
+            <p>Students may use learning resources, including AI tools, when working on the ungraded practice problems to aid their understanding. However, the use of AI tools, personal notes, or any other unauthorized resources is strictly prohibited during all graded assessments, including in-class quizzes and exams.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Make-up Policy</span>
+            </div>
+            <p>Except in unusual circumstances with official approval, no make-up quizzes or exams will be given. Students who need to miss a quiz or exam due to an emergent medical circumstance, grief, jury duty, military training, or another situation covered by the Office of the Dean of Students (ODOS) should submit an absence notification through the Student Absence Notification System:</p>
+            <p><a href="https://www.purdue.edu/odos/support/students/absences.php" target="\_blank">https://www.purdue.edu/odos/support/students/absences.php</a></p>
+            <p>Please send the ODOS approval to Hanh Vo as soon as possible, preferably before the scheduled quiz or exam.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Academic Adjustments for Students with Disabilities</span>
+            </div>
+            <p>Purdue University strives to make learning experiences accessible to all participants. If you anticipate or experience physical or academic barriers based on disability, you are encouraged to contact the Disability Resource Center at: <a href="mailto:drc@purdue.edu">drc@purdue.edu</a> or by phone: 765-494-1247, as soon as possible.</p>
+            <p>If the Disability Resource Center (DRC) has determined reasonable accommodations that you would like to utilize in my class, you must release your Course Accommodation Letter to me. Instructions on sharing your Course Accommodation Letter can be found by visiting: <a href="https://www.purdue.edu/drc/students/course-accommodation-letter.php" target="\_blank">How To Use Your Course Accommodation Letter</a>. Additionally, you are strongly encouraged to contact me as soon as possible to discuss implementation of your accommodation.</p>
+            <p>In this course, we will follow the Department of Mathematics' <a href="https://www.math.purdue.edu/academic/courses/ada" target="\_blank">accommodation procedures for students with disabilities</a>.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Digital Accessibility Statement</span>
+            </div>
+            <p>To help promote equal access for everyone at Purdue, I will make every effort to ensure that all posted course materials including documents, slides, videos, audio, and images, meet accessibility guidelines as required by <a href="https://www.ada.gov/resources/2024-03-08-web-rule/" target="\_blank">Title II of the Americans with Disabilities Act (ADA)</a>. If you encounter any accessibility issues with course materials, or if there is anything further we can do to support your access to and engagement with them, please notify me.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Nondiscrimination Statement</span>
+            </div>
+            <p>Purdue University is committed to maintaining a community which recognizes and values the inherent worth and dignity of every person; fosters tolerance, sensitivity, understanding, and mutual respect among its members; and encourages each individual to strive to reach his or her own potential. In pursuit of its goal of academic excellence, the University seeks to develop and nurture diversity. The University believes that diversity among its many members strengthens the institution, stimulates creativity, promotes the exchange of ideas, and enriches campus life. More details are available on our course Brightspace table of contents, under University Policies.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">CAPS Information</span>
+            </div>
+            <p>Purdue University is committed to advancing the mental health and well-being of its students. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available. For help, such individuals should contact Counseling and Psychological Services (CAPS) at (765)494-6995 and <a href="https://www.purdue.edu/caps" target="\_blank">https://www.purdue.edu/caps</a> during and after hours, on weekends and holidays, or by going to the CAPS office, room 224 of the Purdue University Student Health Center (PUSH) during business hours.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Commercial Note Taking in Classes</span>
+            </div>
+            <p>Notes taken in class are generally considered to be &ldquo;derivative works&rdquo; of the instructor's presentations and materials, and they are thus subject to the instructor's copyright in such presentations and materials. No individual is permitted to sell or otherwise barter notes, either to other students or to any commercial concern, for a course without the express written permission of the course instructor. See University Senate Document 03-9, April 19, 2004.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Academic Dishonesty</span>
+            </div>
+            <p>Academic integrity is one of the highest values that Purdue University holds. Individuals are encouraged to alert university officials to potential breaches of this value by either emailing <a href="mailto:integrity@purdue.edu">integrity@purdue.edu</a> or by calling 765-494-8778. While information may be submitted anonymously, the more information that is submitted provides the greatest opportunity for the university to investigate the concern.</p>
+            <p>Purdue prohibits &ldquo;dishonesty in connection with any University activity. Cheating, plagiarism, or knowingly furnishing false information to the University are examples of dishonesty.&rdquo; [Part 5, Section III-B-2-a, University Regulations] Furthermore, the University Senate has stipulated that &ldquo;the commitment of acts of cheating, lying, and deceit in any of their diverse forms (such as the use of substitutes for taking examinations, the use of illegal cribs, plagiarism, and copying during examinations) is dishonest and must not be tolerated. Moreover, knowingly to aid and abet, directly or indirectly, other parties in committing dishonest acts is in itself dishonest.&rdquo; [University Senate Document 72-18, December 15, 1972]. For more details about the Purdue Policy on academic dishonesty see: <a href="http://www.purdue.edu/odos/academic-integrity/" target="\_blank">http://www.purdue.edu/odos/academic-integrity/</a></p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Course and Instructor Evaluations</span>
+            </div>
+            <p>During the last two weeks of the semester, you will be provided an opportunity to evaluate this course and your instructor(s) through online course evaluations. On Monday of the 14th week of classes, you will receive an official email from evaluation administrators with a link to the online site. You will have two weeks to complete this evaluation. Your participation in this evaluation is an integral part of this course. Your feedback is vital to improving education at Purdue University. We strongly urge you to participate in the evaluation system.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Other Issues</span>
+            </div>
+            <p>In the event of a major campus emergency, course requirements, deadlines and grading percentages are subject to changes that may be necessitated by a revised semester calendar or other circumstances beyond the instructor's control. To get information about changes in this course please check Brightspace regularly.</p>
+        </section>
+
+        <section class="syllabus-section">
+            <div style="margin-bottom: 15px;">
+                <span class="sub-section-label">Disclaimer</span>
+            </div>
+            <p>This syllabus is subject to change. Updates will be posted on Brightspace.</p>
+        </section>
+
+    </main>
+</div>
+
+<!-- Global Footer -->
+<footer class="footer-signature"> 
+    <p>&copy; 2026 Hanh Vo &bull; Department of Mathematics &bull; Purdue University</p> 
+</footer>
+
+</body>
+</html>
