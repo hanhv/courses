@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 1 | MA 16600</title>
+
+    <link rel="stylesheet" href="https://hanhv.github.io/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <header>
+            <h1>Lesson 1</h1>
+
+            <p class="item-desc course-title">
+                Vectors in the Plane and in 3D
+            </p>
+        </header>
+
+        <main>
+
+            <section>
+                <h2 class="section-title">1.1 Vectors in the Plane</h2>
+
+                <p>
+                    This is the lesson content.
+                </p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("../components/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+
+        fetch("../components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>
