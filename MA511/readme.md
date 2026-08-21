@@ -1,13 +1,12 @@
-# MA 16600 — Calculus II
+# MA 51100
 
-This folder contains the Fall 2026 MA 16600 course website.
+This folder contains the Fall 2026 MA 51100 course website.
 
 ## Structure
 
 - `index.html` — Main course homepage and complete lesson list.
 - `schedule.html` — Course schedule.
-- `groundrules.html` — Course ground rules.
-- `QuickStudentGuide.html` — Quick Student Guide.
+- `syllabus.html` — Course ground rules. 
 
 ### Shared Components
 
@@ -22,7 +21,7 @@ Changes to these shared files should automatically apply to all lesson pages.
 
 The `lessons/` folder contains the individual lesson pages:
 
-- `lesson01.html` through `lesson35.html`
+- `lesson01.html` through `lesson36.html`
 
 Each lesson file should contain the lesson-specific content only. Shared header/navigation and footer content should not be duplicated in each lesson.
 
@@ -32,4 +31,4 @@ The site uses the global stylesheet:
 
 `https://hanhv.github.io/style.css`
 
-The MA166 lesson pages use JavaScript to load the shared components from `components/header.html` and `components/footer.html`.
+The MA511 lesson pages use JavaScript to load the shared components from `components/header.html` and `components/footer.html`.
