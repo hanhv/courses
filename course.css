@@ -10,30 +10,37 @@
 }
 
 /* 2. RESET & BASE STYLES */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+/* Keep the entire course site white, including the html background */
+html,
+body {
+    min-height: 100%;
+    background: #ffffff !important;
+}
+
+html {
+    background-color: #ffffff !important;
 }
 
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     color: var(--text-main);
     line-height: 1.6;
-    background: var(--bg-white); /* removes main-site gradient too */
+    background: #ffffff !important;
     -webkit-font-smoothing: antialiased;
-    font-size: 16px; /* restores old course sizing */
+    font-size: 16px;
 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* IMPORTANT: undo the new main-site global main padding */
+/* Undo the new main-site global main padding */
 body > .container main {
     padding: 0;
 }
@@ -100,14 +107,16 @@ body > .container main {
 }
 
 /* 5. HEADERS & TITLES */
-header { margin-bottom: 40px; }
+header {
+    margin-bottom: 40px;
+}
 
-h1 { 
-    font-size: 3rem; 
-    font-weight: 800; 
-    letter-spacing: -1.5px; 
-    margin-bottom: 8px; 
-    line-height: 1.1; 
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 8px;
+    line-height: 1.1;
 }
 
 .section-title {
@@ -129,7 +138,7 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: 'Libre Baskerville', serif;
-    font-style: italic; 
+    font-style: italic;
     font-size: 1rem;
     color: #010f1d;
     font-weight: 500;
@@ -138,14 +147,18 @@ h1 {
 }
 
 /* 7. LIST & TABLE STYLES */
-.section-list { list-style: none; }
+.section-list {
+    list-style: none;
+}
 
 .section-item {
     padding: 12px 0;
     border-bottom: 1px solid var(--border-light);
 }
 
-.section-item:last-child { border-bottom: none; }
+.section-item:last-child {
+    border-bottom: none;
+}
 
 .section-link {
     font-weight: 500;
@@ -155,7 +168,9 @@ h1 {
     transition: color 0.2s;
 }
 
-.section-link:hover { color: var(--purdue-gold); }
+.section-link:hover {
+    color: var(--purdue-gold);
+}
 
 .item-desc {
     color: var(--text-muted);
@@ -168,8 +183,8 @@ h1 {
     border: 1px solid var(--border-light);
     border-radius: 8px;
     overflow-x: auto;
-    max-height: 500px; 
-    overflow-y: auto; 
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 table.data-table th {
@@ -193,6 +208,7 @@ table.data-table th {
     flex-shrink: 0;
     padding: 30px 0;
     border-top: 1px solid var(--border-light);
+    background: #ffffff;
 }
 
 .footer-signature p {
@@ -206,25 +222,37 @@ table.data-table th {
 
 /* 10. MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
-    h1 { font-size: 2.2rem; }
-
-    .container { 
-        padding: 40px 20px; 
+    h1 {
+        font-size: 2.2rem;
     }
 
-    .nav-container { 
-        padding: 0 20px; 
+    .container {
+        padding: 40px 20px;
     }
 
-    .footer-signature p { padding: 0 20px; }
-    .nav-links { display: flex; gap: 10px; }
-    .nav-links a { margin-left: 0; font-size: 0.8rem; }
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .footer-signature p {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
 }
 
 /* 11. PROFILE LAYOUT */
 .profile-flex {
     display: flex;
-    gap: 50px;           
+    gap: 50px;
     align-items: flex-start;
     margin-top: 40px;
 }
@@ -234,14 +262,14 @@ table.data-table th {
 }
 
 .profile-text .section-title {
-    margin-top: 0 !important; 
+    margin-top: 0 !important;
 }
 
 .profile-image-container {
     flex: 1;
     display: flex;
-    justify-content: flex-end; 
-    padding-top: 5px; 
+    justify-content: flex-end;
+    padding-top: 5px;
 }
 
 .profile-photo {
@@ -256,7 +284,7 @@ table.data-table th {
 .accessibility-report {
     margin-top: 30px;
     margin-bottom: -10px;
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
     color: #555;
     font-family: "Libre Baskerville", serif;
 }
