@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ground Rules for MA 166 Fall 2026 PWL</title>
+<style>
+:root {
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --color-heading: #1a1a1a;
+  --color-border: #333333;
+  --color-link: #0b4d8c;
+  --color-note-bg: #eef4fb;
+  --color-note-border: #0b4d8c;
+  --color-warning-bg: #fdf1ec;
+  --color-warning-border: #b3401a;
+  --color-table-header-bg: #e6e6e6;
+  --color-table-border: #666666;
+  --focus-outline: 3px solid #0b4d8c;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.page-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem 1.25rem;
+}
+a.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: #ffffff;
+  color: var(--color-link);
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--color-link);
+  z-index: 1000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+a.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+a:focus, button:focus, [tabindex]:focus {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+h1, h2, h3 {
+  color: var(--color-heading);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.3;
+}
+h1 {
+  font-size: 1.7rem;
+  text-align: center;
+  border-bottom: 3px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+p.version-line {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #999999;
+}
+h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+nav.toc {
+  background-color: #f5f5f5;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+nav.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.15rem;
+}
+nav.toc ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+nav.toc li {
+  margin-bottom: 0.35rem;
+}
+ol, ul {
+  padding-left: 1.75rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+ol ol, ul ul, ol ul, ul ol {
+  margin-top: 0.5rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.25rem 0;
+  font-size: 0.98rem;
+}
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  caption-side: top;
+}
+th, td {
+  border: 1px solid var(--color-table-border);
+  padding: 0.55rem 0.85rem;
+  text-align: left;
+}
+thead th {
+  background-color: var(--color-table-header-bg);
+  font-weight: bold;
+}
+tbody th[scope="row"] {
+  background-color: #f7f7f7;
+  font-weight: normal;
+}
+.note-box, .warning-box {
+  border-left: 5px solid;
+  border-radius: 4px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.note-box {
+  background-color: var(--color-note-bg);
+  border-color: var(--color-note-border);
+}
+.warning-box {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-border);
+}
+.note-box p:first-child, .warning-box p:first-child {
+  margin-top: 0;
+}
+.note-box p:last-child, .warning-box p:last-child {
+  margin-bottom: 0;
+}
+.label {
+  font-weight: bold;
+}
+.box-heading {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+address {
+  font-style: normal;
+}
+footer.doc-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #999999;
+  font-size: 0.9rem;
+  color: #444444;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .page-container {
+    padding: 1rem 0.9rem 3rem 0.9rem;
+  }
+  th, td {
+    padding: 0.45rem 0.6rem;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="page-container">
+<h1>Ground Rules for MA 166 Fall 2026 </h1>
+<p class="version-line">Version: August 19, 2026</p>
+
+<nav class="toc" aria-labelledby="toc-heading">
+<h2 id="toc-heading">Table of Contents</h2>
+<ol>
+<li><a href="#sec1">Structure of Lectures and Recitation Classes</a></li>
+<li><a href="#sec2">Information</a></li>
+<li><a href="#sec3">Schedule</a></li>
+<li><a href="#sec4">Textbook</a></li>
+<li><a href="#sec5">MyLabMath</a></li>
+<li><a href="#sec6">Homework</a></li>
+<li><a href="#sec7">Quiz</a></li>
+<li><a href="#sec8">Exam</a></li>
+<li><a href="#sec9">Office Hour</a></li>
+<li><a href="#sec10">Grading Scheme</a></li>
+<li><a href="#sec11">Late Registration and/or Transfer</a></li>
+<li><a href="#sec12">Academic Adjustments for Students with Disabilities</a></li>
+<li><a href="#sec13">Important Dates</a></li>
+<li><a href="#sec14">SMART Center</a></li>
+<li><a href="#sec15">The Use of AI</a></li>
+</ol>
+</nav>
+
+<main id="main-content">
+
+<h2 id="sec1">1. Structure of Lectures and Recitation Classes</h2>
+<h3 id="sec1-1">1.1 Lectures</h3>
+<p>The lecturer</p>
+<ul>
+<li>Hanh Vo, 1:30&nbsp;PM&nbsp;&ndash;&nbsp;2:20&nbsp;PM in LE&nbsp;100</li>
+</ul>
+<p>delivers in-person lectures Monday, Wednesday, and Friday.</p>
+<p>Attendance is taken using the iClicker, starting with Lesson&nbsp;6 on Friday, September&nbsp;4, and ending with Lesson&nbsp;35 on Friday, December&nbsp;4. The details of how the iClicker will be used toward the attendance grade will be explained later.</p>
+<p>A more detailed schedule of lectures and the contents of each lesson can be found in:</p>
+<ul>
+<li>the Assignment Sheet, and</li>
+<li>the Lecture Plan.</li>
+</ul>
+<div class="note-box" role="note">
+<span class="box-heading">Note</span>
+<p>Links to supplemental videos of the lectures (made by Matsuki) will be posted on Brightspace to help students understand the lectures better. However, watching the supplemental videos will <strong>not</strong> substitute for attending the lectures in person.</p>
+</div>
+
+<h3 id="sec1-2">1.2 Recitation Classes</h3>
+<p>There is a Recitation Class every Thursday, administered by your own Recitation Instructor. In-person attendance at the Recitation Class is also required.</p>
+
+<h2 id="sec2">2. Information</h2>
+<p>All key information will be posted in the announcements of the following files on Brightspace:</p>
+<ul>
+<li>Fall 2026 MA 16600-001 LEC</li>
+</ul>
+
+<h2 id="sec3">3. Schedule</h2>
+<p>The detailed schedule for lectures, homework, quizzes, and exams can be found on the <a href="schedule.html">Assignment Sheet</a>.</p>
+<h2 id="sec4">4. Textbook</h2>
+<p>The textbook for MA 166 for Fall 2026 is <em>Calculus with Early Transcendentals</em> by Briggs, et al., Pearson, 3rd edition. For more information on the textbook, see the Quick Student Guide to MyLabMath, also posted in the announcements listed in Section&nbsp;2 above.</p>
+
+<h2 id="sec5">5. MyLabMath</h2>
+<ol>
+<li>It is essential for every student to have an account in MyLabMath, where all records &mdash; including homework, quizzes, exams, and lecture attendance &mdash; are kept throughout the semester.</li>
+<li>Students should purchase an access code for MyLabMath. For details on how to buy an access code, see the Quick Student Guide to MyLabMath.</li>
+<li>All questions and inquiries regarding MyLabMath should be directed to your Recitation Instructor, <strong>not</strong> to your lecturer (Vo).</li>
+<li><span class="label">Overriding erroneous grading by computer:</span> If you believe the MyLabMath computer made an error grading your homework or quiz and did not recognize your correct answer as such, contact your Recitation Instructor, not your lecturer. They will review your answer and, if it is correct, override the computer grading. For any other inquiry about a homework or quiz assignment on MyLabMath, contact your Recitation Instructor first, not your lecturer.</li>
+</ol>
+
+<h2 id="sec6">6. Homework</h2>
+<ol>
+<li><span class="label">Format:</span> Homework is given as an assignment in MyLabMath, corresponding to each lecture.</li>
+<li><span class="label">Deadline:</span> The deadline to submit MyLabMath homework is usually 11:59&nbsp;PM on Sunday. The specific deadline for each assignment can be found on MyLabMath. No extension of the deadline is allowed, except under special circumstances.</li>
+<li><span class="label">Score dropping:</span> The two lowest homework scores will be dropped at the end of the semester.</li>
+<li><span class="label">Piazza Forum:</span> A Piazza Forum will be set up where students can post questions about homework, starting in the second week of the semester. Details will be announced later.</li>
+</ol>
+
+<h2 id="sec7">7. Quiz</h2>
+<ol>
+<li><span class="label">Format:</span>
+<ol>
+<li>Every Thursday, students work on a quiz given as an assignment in MyLabMath and submit their work online. The material covered in each quiz can be found in the Assignment Sheet. Your Recitation Instructor (TA) will help you with the quiz during the in-person recitation class.</li>
+<li>The actual working time allowed for the quiz is 120 minutes.</li>
+<li>An unlimited number of attempts is allowed on a quiz. However, each time you start a new attempt, all previously submitted answers are erased and you must start from scratch.</li>
+</ol>
+</li>
+<li><span class="label">Physical attendance required:</span> Attendance is taken at the Recitation Class.
+<div class="warning-box" role="note">
+<span class="box-heading">Important</span>
+<p>If you do not attend the Recitation Class, the score of the quiz you submit online will be manually brought down to 0 by your Recitation Instructor.</p>
+</div>
+</li>
+<li><span class="label">Collaborative nature of the quiz:</span> The quiz is not a test. You are encouraged to discuss the problems with your peers and with your Recitation Instructor.</li>
+<li><span class="label">Deadline:</span> The deadline to submit your quiz work is 11:59&nbsp;PM on the Sunday following the Recitation Class (Thursday).</li>
+<li><span class="label">Score dropping:</span> The one lowest quiz score will be dropped at the end of the semester.</li>
+<li><span class="label">No Piazza Forum:</span> Students should not use the Piazza Forum to post questions about quiz problems.</li>
+</ol>
+
+<h2 id="sec8">8. Exam</h2>
+<ol>
+<li><span class="label">Midterms:</span> There will be three midterms, each one hour long. The specific date of each midterm can be found in the Assignment Sheet.</li>
+<li><span class="label">Final Exam:</span> The date and place of the Final Exam will be announced as the time gets closer.</li>
+<li><span class="label">Study Guide:</span> For each exam, a Study Guide with example problems will be provided. Most problems on the real exam will be drawn from the example problems, possibly with different wording, numbers, and modifications.</li>
+</ol>
+
+<h2 id="sec9">9. Office Hour</h2>
+<p>Hanh Vo will hold office hours (help session) Monday, Wednesday, and Friday, 3:45&nbsp;&ndash;&nbsp;4:45&nbsp;PM, in ET&nbsp;314.</p>
+
+<h2 id="sec10">10. Grading Scheme</h2>
+<h3 id="sec10-1">10.1 Total Score and Weights</h3>
+<p>The course grade will be determined by the total score, calculated with the following weights:</p>
+<table>
+<caption>Weights for the Total Score</caption>
+<thead>
+<tr><th scope="col">Category</th><th scope="col">Points</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Lecture Attendance</th><td>30</td></tr>
+<tr><th scope="row">Homework</th><td>200</td></tr>
+<tr><th scope="row">Quizzes</th><td>100</td></tr>
+<tr><th scope="row">3 Midterm Exams (3 &times; 100)</th><td>300</td></tr>
+<tr><th scope="row">Final Exam</th><td>200</td></tr>
+<tr><th scope="row"><strong>Total Score</strong></th><td><strong>830</strong></td></tr>
+</tbody>
+</table>
+<p>There are 34 MyLabMath homework assignments (the two lowest of which will be dropped) and 11 quizzes (the lowest of which will be dropped) to be graded. </p>
+<div class="note-box" role="note">
+<span class="box-heading">Remark</span>
+<p>There are 34 MyLabMath homework assignments, with the two lowest scores dropped. Thus, the 32 remaining assignments are intended to total 200 points, so each assignment is worth 200/(34-2) = 6.25 points. Since MyLabMath only allows whole-number point values, individual assignments are assigned 6 or 7 points. As a result, the homework category may total slightly more than 200 points after the two lowest assignments are dropped. Any points above 200 will be treated as bonus points.</p>
+</div>
+
+<h3 id="sec10-2">10.2 Cut-Off Points</h3>
+<p>Letter grades will be determined according to the following cut-off points:</p>
+<table>
+<caption>Letter Grade Cut-Off Points (Total Score out of 830)</caption>
+<thead>
+<tr><th scope="col">Letter Grade</th><th scope="col">Score Range</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">A+</th><td>830 &ndash; 790</td></tr>
+<tr><th scope="row">A</th><td>789 &ndash; 750</td></tr>
+<tr><th scope="row">A&minus;</th><td>749 &ndash; 720</td></tr>
+<tr><th scope="row">B+</th><td>719 &ndash; 690</td></tr>
+<tr><th scope="row">B</th><td>689 &ndash; 660</td></tr>
+<tr><th scope="row">B&minus;</th><td>659 &ndash; 630</td></tr>
+<tr><th scope="row">C+</th><td>629 &ndash; 600</td></tr>
+<tr><th scope="row">C</th><td>599 &ndash; 570</td></tr>
+<tr><th scope="row">C&minus;</th><td>569 &ndash; 540</td></tr>
+<tr><th scope="row">D+</th><td>539 &ndash; 510</td></tr>
+<tr><th scope="row">D</th><td>509 &ndash; 480</td></tr>
+<tr><th scope="row">F</th><td>479 or below</td></tr>
+</tbody>
+</table>
+<div class="warning-box" role="note">
+<span class="box-heading">Note and Warning</span>
+<ol>
+<li>At the end of the semester, if the distribution of letter grades is far off from the traditional distribution, the cut-off points above <strong>may be lowered</strong>. They will <strong>never be raised</strong>.</li>
+<li>The MyLabMath score display is designed to exclude past-due assignments from the calculation by default, while their scores will be counted as zero at the end of the semester. We will try to manually adjust the scores of past-due assignments to zero partway through the semester. However, if you have many past-due assignments, the displayed score of your performance in MyLabMath may be deceptively higher than your actual score.</li>
+</ol>
+</div>
+
+<h2 id="sec11">11. Late Registration and/or Transfer</h2>
+<p>If you have not yet registered for the course but intend to, ask the TA of the section you are attending to set up a MyLabMath account for you, and begin submitting assignments. There is a two-week trial period for the MyLabMath account; after that, you will need to pay the nonrefundable access fee.</p>
+<p>If you want to transfer from one section to another, you must obtain permission from the lecturer and notify the TAs of both the old section and the new one about your transfer.</p>
+
+<h2 id="sec12">12. Academic Adjustments for Students with Disabilities</h2>
+<p>Purdue University strives to make learning experiences accessible to all participants. If you anticipate or experience physical or academic barriers based on disability, you are welcome to let us know so that we can discuss options. You are also encouraged to contact the Disability Resource Center by email at <a href="mailto:drc@purdue.edu">drc@purdue.edu</a> or by phone at 765-494-1247.</p>
+<p>If you have already been certified for academic adjustments by the Disability Resource Center (DRC), or are awaiting certification, please follow the procedures below for your mathematics course.</p>
+<p>Share your Course Accommodation Letter (CAL) with your instructor(s); instructions for doing this can be found at <a href="https://www.purdue.edu/drc/students/course-accommodation-letter.php">purdue.edu/drc/students/course-accommodation-letter.php</a>.</p>
+<p>For all in-class accommodations, see your instructor before class, after class, or during office hours to discuss your accommodations for the current semester.</p>
+<p>For all exam-related accommodations, Stephanie Foster will email your Purdue email account within the first two weeks of class with instructions on scheduling your accommodated math exams. If you do not receive an email after two weeks, first search your email for &ldquo;foster80&rdquo;, as the message may have gone to your spam folder. If you still do not find an email from Mrs.&nbsp;Foster, contact her at <a href="mailto:foster80@purdue.edu">foster80@purdue.edu</a>. Math exams will be administered by either the Department of Mathematics or Purdue Testing Services, depending on the type of accommodation required.</p>
+<div class="note-box" role="note">
+<span class="box-heading">Attendance Flexibility Plan</span>
+<p>The Attendance Flexibility Plan allows a certified student to be excused for up to six (6) disability-related absences, including lectures and Recitation classes combined, during the semester.</p>
+</div>
+
+<h2 id="sec13">13. Important Dates</h2>
+<p>To find the important dates for the semester, visit <a href="https://www.purdue.edu/registrar/calendars/">purdue.edu/registrar/calendars</a>.</p>
+
+<h2 id="sec14">14. SMART Center</h2>
+<p>In Fall 2026, graduate TAs teaching recitation (Recitation Instructors) for MA 166 will hold one common office hour per section they teach in the SMART Center (Science and Math Academic Resource and Tutoring Center), located in the ET building. Most TAs teach two sections and will therefore have two office hours in the center. The director of the SMART Center, Julie Lang (lang154), will be in touch with more information. The center is staffed by undergraduate hourly workers and graduate TAs.</p>
+
+<h2 id="sec15">15. The Use of AI</h2>
+<ol>
+<li>Students may use AI while working on homework and/or quiz assignments, as long as its use enhances the student's learning and is not used to copy the answers provided by the AI directly. Students should make sure they can solve each problem even without the help of AI, after understanding the problem and the concepts behind it.</li>
+<li>Students may use a calculator while working on homework and quiz assignments.</li>
+<li>No calculator or AI is allowed during exams.</li>
+</ol>
+
+</main>
+<footer class="doc-footer">
+<p>Ground Rules for MA 166 Fall 2026 &mdash; Version: August 19, 2026</p>
+</footer>
+</div>
+</body>
+</html>
